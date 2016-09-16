@@ -1,0 +1,55 @@
+# This file was taken from https://codevault.io/kaeuferportal/dotfiles
+# Try to put general rules there and only add the project specific
+# rules to the copy in your project folder.
+
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'doc/**/*'
+    - 'docker_app/**/*'
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+# Encoding comments are not neccessary in all 2.x versions of ruby, since
+# UTF-8 has become the default encoding.
+Style/Encoding:
+  EnforcedStyle: never
+  Enabled: true
+  Exclude:
+    - '*.gemspec'
+
+# This cop tries to make you use module_funtion instead of extend self
+# This is bad because both have their own use-case and should not be used
+# and sometimes cannot be used to do the same thing
+Style/ModuleFunction:
+  Enabled: false
+
+# While it is very often useful to separate numbers after every three digits
+# for readability, this mostly doesn't make sense if the number doesn't
+# represent an amount but rather an identifier. Thus the use of underscores
+# every three digits is recommended but not enforced.
+Style/NumericLiterals:
+  Enabled: false
+
+# Do not force the same one letter variable names for all occurences of inject
+Style/SingleLineBlockParams:
+  Enabled: false
+
+# No significant improvement in speed or memory usage apparent. Readability is
+# atrocious.
+Performance/Casecmp:
+  Enabled: false
+
+# Not safe in a rails context, since Relation.count is != Enumerable.count
+Performance/Count:
+  Enabled: false
+
+# Does not make sense when dealing with non-ActiveRecord like mongoid. that
+# Mongoid for example throws error if find_by returns nothing (but we expect
+# nil)
+Rails/FindBy:
+  Enabled: false
