@@ -7,7 +7,7 @@ module SentryRealIp
     end
 
     def call(env)
-      real_ip = determine_real_ip
+      real_ip = determine_real_ip(env)
       if real_ip
         user_context = { ip_address: real_ip }.merge(Raven.context.user)
         Raven.user_context(user_context)
@@ -17,7 +17,7 @@ module SentryRealIp
 
     private
 
-    def determine_real_ip
+    def determine_real_ip(env)
       real_ip = env['HTTP_X_FORWARDED_FOR'] || env['HTTP_X_REAL_IP']
       real_ip.split(',').first.strip if real_ip && !real_ip.empty?
     end
