@@ -1,3 +1,6 @@
+[![Gem Version](https://badge.fury.io/rb/sentry_real_ip.svg)](https://badge.fury.io/rb/sentry_real_ip)
+[![Code Climate](https://codeclimate.com/github/kaeuferportal/sentry_real_ip/badges/gpa.svg)](https://codeclimate.com/github/kaeuferportal/sentry_real_ip)
+
 # SentryRealIp
 
 This gem provides a rack middleware that will enable Sentry
