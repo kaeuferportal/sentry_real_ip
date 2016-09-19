@@ -11,23 +11,16 @@ and the user.
 Include the gem in your application:
 
 ````ruby
-gem 'sentry_real_ip', '~> 1.0', codevault: 'kaeuferportal/sentry_real_ip'
+gem 'sentry_real_ip', '~> 1.1', codevault: 'kaeuferportal/sentry_real_ip'
 ````
 
-You will also need to tell your application to use the middleware,
-the exact steps differ depending on the framework you are using.
+Depending on your framework, you may also need to tell your application
+to use the middleware of this gem. For Rails applications, it just works,
+and you are done by adding it to the Gemfile. 
 
-## For Rails applications
-
-In your `config/application.rb` add the following line:
-
-````ruby
-config.middleware.use SentryRealIp::Middleware
-````
-
-## For other applications (e.g. Sinatra)
-
-In your `config.ru` add the following line before the `run` call:
+For other frameworks (e.g. Sinatra) you need to explicitly use the
+middleware, e.g. in your `config.ru`, you can put this before the
+call to `run`:
 
 ````ruby
 use Raven::Rack # you will usually already have this line
