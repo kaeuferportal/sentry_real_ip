@@ -6,6 +6,7 @@ Gem::Specification.new do |s|
   s.version     = SentryRealIp::VERSION
   s.summary     = 'Middleware to tell Sentry the real IP of our HTTP clients.'
   s.authors     = ['Beko Käuferportal GmbH']
+  s.license     = 'MIT'
   s.files       = `git ls-files -z`.split("\x0")
                                    .reject do |f|
                                      f.match(%r{^(test|spec|features)/})
