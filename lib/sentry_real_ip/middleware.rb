@@ -1,5 +1,3 @@
-require 'json'
-
 module SentryRealIp
   class Middleware
     def initialize(app)
