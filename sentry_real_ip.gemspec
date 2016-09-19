@@ -4,7 +4,10 @@ require './lib/sentry_real_ip/version'
 Gem::Specification.new do |s|
   s.name        = 'sentry_real_ip'
   s.version     = SentryRealIp::VERSION
+  s.email       = 'oss@kaeuferportal.de'
   s.summary     = 'Middleware to tell Sentry the real IP of our HTTP clients.'
+  s.description = s.summary
+  s.homepage    = 'https://github.com/kaeuferportal/sentry_real_ip'
   s.authors     = ['Beko Käuferportal GmbH']
   s.license     = 'MIT'
   s.files       = `git ls-files -z`.split("\x0")
