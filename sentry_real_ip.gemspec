@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
 
   s.require_paths = ['lib']
 
-  s.add_dependency 'sentry-raven', '~> 1.2'
+  s.add_dependency 'sentry-raven', ['>= 1.2.0', '< 2.1']
 
   s.add_development_dependency 'rack', '~> 1.0'
   s.add_development_dependency 'rubocop', '~> 0.42'
