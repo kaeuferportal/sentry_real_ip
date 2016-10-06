@@ -1,5 +1,9 @@
 # master
 
+* no unreleased changes
+
+# 1.1.2 (2016-10-06)
+
 * Tell the gem to be compatible with the newer 2.x version of `sentry-raven`.
 
 # 1.1.1 (2016-09-19)
