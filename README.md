@@ -14,7 +14,7 @@ and the user.
 Include the gem in your application:
 
 ````ruby
-gem 'sentry_real_ip', '~> 1.1', codevault: 'kaeuferportal/sentry_real_ip'
+gem 'sentry_real_ip', '~> 1.1'
 ````
 
 Depending on your framework, you may also need to tell your application
